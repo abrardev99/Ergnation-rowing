@@ -57,12 +57,12 @@
                             <tr>
                                 <td><a href="{{ $result->proof_url }}"><img width="50px" src="{{ $result->proof_url }}"></a></td>
                                 <td>{{ $result->league->name }}</td>
-                                <td>{{ $league->type }}</td>
-                                <td>{{ $league->weight_class }}</td>
-                                <td>{{ $league->hours.'H' }} {{ $league->minutes.'M' }} {{ $league->seconds.'S' }} {{ $league->tenths.'T' }}</td>
-                                <td>{{ $league->distance }}</td>
-                                <td>{{ $league->workout_date }}</td>
-                                <td>{{ $league->comments }}</td>
+                                <td>{{ $result->type }}</td>
+                                <td>{{ $result->weight_class }}</td>
+                                <td>{{ $result->hours.'H' }} {{ $result->minutes.'M' }} {{ $result->seconds.'S' }} {{ $result->tenths.'T' }}</td>
+                                <td>{{ $result->distance }} M</td>
+                                <td>{{ $result->workout_date }}</td>
+                                <td>{{ $result->comments }}</td>
                             </tr>
                             </tbody>
                         </table>

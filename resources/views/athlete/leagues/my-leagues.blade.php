@@ -71,9 +71,10 @@
                                     <td>
                                         <div class="table-actions">
                                             @if($league->results_count > 0)
-                                                <a href="{{ route('athlete.results', $league) }}"><i data-toggle="tooltip" data-title="View Results" class="ik ik-eye"></i></a>
+                                                <a href="{{ route('athlete.results', $league) }}"><i data-toggle="tooltip" data-title="View My Result" class="ik ik-eye"></i></a>
+                                            @else
+                                                <a href="{{ route('athlete.results.create', $league) }}" ><i data-toggle="tooltip" data-title="Upload My Result" class="ik ik-upload"></i></a>
                                             @endif
-                                            <a href="{{ route('athlete.results.create', $league) }}" ><i data-toggle="tooltip" data-title="Upload Results" class="ik ik-upload"></i></a>
                                         </div>
                                     </td>
                                 </tr>
