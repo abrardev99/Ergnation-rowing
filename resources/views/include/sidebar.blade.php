@@ -80,7 +80,7 @@
                 @endif
 
                 @if(auth()->user()->hasRole(['Athlete']))
-                    <div class="nav-item {{ request()->is('league*') ? 'active open' : '' }} has-sub">
+                    <div class="nav-item {{ request()->is('league*') || request()->is('athlete/my-leagues*') ? 'active open' : '' }} has-sub">
                     <a href="#"><i class="ik ik-align-justify"></i><span>{{ __('Leagues')}}</span></a>
                     <div class="submenu-content">
                          <a href="{{ route('league.index') }}" class="menu-item {{ request()->is('league') ? 'active' : '' }}"> {{ __('Leagues')}}</a>
