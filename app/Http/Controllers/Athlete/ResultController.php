@@ -29,6 +29,11 @@ class ResultController extends Controller
 
     public function show(League $league)
     {
-        dd($league);
+        $result = $league->whereHas('results', function ($q){
+            $q->where('athlete_id', auth()->id());
+        })->first();
+        dd($result);
+
+        return view('athlete.results.show', compact('result'));
     }
 }

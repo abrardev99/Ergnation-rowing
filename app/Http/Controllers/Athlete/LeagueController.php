@@ -8,7 +8,7 @@ class LeagueController extends Controller
 {
     public function myLeagues()
     {
-        $leagues = auth()->user()->athleteLeagues;
+        $leagues = auth()->user()->athleteLeagues()->withCount('results')->get();
         return view('athlete.leagues.my-leagues', compact('leagues'));
     }
 }
