@@ -40,6 +40,12 @@ class League extends Model
         return Storage::disk('s3')->url($this->logo);
     }
 
+    // left league
+    public function scopeLeft($q)
+    {
+
+    }
+
     // who created user
     public function user()
     {
@@ -49,7 +55,8 @@ class League extends Model
     // league athletes
     public function athletes()
     {
-        return $this->belongsToMany(User::class, 'athlete_league', 'league_id','athlete_id');
+        return $this->belongsToMany(User::class, 'athlete_league', 'league_id','athlete_id')
+            ->withPivot('is_left');
     }
 
     // results
