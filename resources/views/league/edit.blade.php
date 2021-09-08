@@ -48,8 +48,6 @@
                             @csrf
                             @method('PUT')
 
-                            @php var_dump($errors->all()) @endphp
-
                             <div class="row">
 
                                 <div class="col-sm-6">
@@ -59,7 +57,7 @@
                                         <span class="text-muted">This will replace old logo</span>
                                         <div class="help-block with-errors"></div>
 
-                                        @error('logo')s
+                                        @error('logo')
                                         <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

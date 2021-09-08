@@ -20,10 +20,10 @@
                 <div class="nav-item {{ ($segment1 == 'dashboard') ? 'active' : '' }}">
                     <a href="{{route('dashboard')}}"><i class="ik ik-bar-chart-2"></i><span>{{ __('Dashboard')}}</span></a>
                 </div>
-                <div class="nav-item {{ ( $segment1 == 'profile') ? 'active open' : '' }} has-sub">
+                <div class="nav-item {{ request()->is('profile*') ? 'active open' : '' }} has-sub">
                     <a href="#"><i class="ik ik-info"></i><span>{{ __('Profile')}}</span></a>
                     <div class="submenu-content">
-                        <a href="{{url('profile')}}" class="menu-item {{ ($segment1 == 'profile') ? 'active' : '' }}"> {{ __('Profile')}}</a>
+                        <a href="{{ route('common.profile.index') }}" class="menu-item {{ ($segment1 == 'profile') ? 'active' : '' }}"> {{ __('Profile')}}</a>
                         <!-- only those have manage_user permission will get access
                         @can('manage_user')
                         <a href="{{url('users')}}" class="menu-item {{ ($segment1 == 'users') ? 'active' : '' }}">{{ __('Users')}}</a>
