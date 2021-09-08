@@ -111,7 +111,7 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="business">{{ __('Business')}}<span class="text-red">*</span></label>
+                                        <label for="business">{{ __('Description')}}<span class="text-red">*</span></label>
                                         <input id="business" type="text" class="form-control @error('business') is-invalid @enderror" name="business" value="{{ old('business') }}" required>
                                         <div class="help-block with-errors"></div>
                                         @error('business')

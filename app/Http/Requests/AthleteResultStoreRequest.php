@@ -15,8 +15,6 @@ class AthleteResultStoreRequest extends FormRequest
     {
         return [
             'proof_photo' => ['required', 'image', 'mimes:jpg,png,jpeg', 'max:20000'],
-            'type' => ['required'],
-            'weight_class' => ['required'],
             'hours' => ['required', 'numeric'],
             'minutes' => ['required', 'numeric'],
             'seconds' => ['required', 'numeric'],

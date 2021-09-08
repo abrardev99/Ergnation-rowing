@@ -49,7 +49,7 @@
                                 <th>{{ __('Type')}}</th>
                                 <th>{{ __('Machine Type')}}</th>
                                 <th>{{ __('Allow Join')}}</th>
-                                <th>{{ __('Business')}}</th>
+                                <th>{{ __('Description')}}</th>
                                 <th>{{ __('Category')}}</th>
                                 <th>{{ __('Gender')}}</th>
                                 <th>{{ __('Age Group')}}</th>

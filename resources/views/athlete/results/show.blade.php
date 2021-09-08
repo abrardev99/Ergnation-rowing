@@ -54,16 +54,20 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><a href="{{ $result->proof_url }}"><img width="50px" src="{{ $result->proof_url }}"></a></td>
-                                <td>{{ $result->league->name }}</td>
-                                <td>{{ $result->type }}</td>
-                                <td>{{ $result->weight_class }}</td>
-                                <td>{{ $result->hours.'H' }} {{ $result->minutes.'M' }} {{ $result->seconds.'S' }} {{ $result->tenths.'T' }}</td>
-                                <td>{{ $result->distance }} M</td>
-                                <td>{{ $result->workout_date }}</td>
-                                <td>{{ $result->comments }}</td>
-                            </tr>
+                            @forelse($results as $result)
+                                <tr>
+                                    <td><a href="{{ $result->proof_url }}"><img width="50px"
+                                                                                src="{{ $result->proof_url }}"></a></td>
+                                    <td>{{ $result->league->name }}</td>
+                                    <td>{{ $result->type }}</td>
+                                    <td>{{ $result->weight_class }}</td>
+                                    <td>{{ $result->hours.'H' }} {{ $result->minutes.'M' }} {{ $result->seconds.'S' }} {{ $result->tenths.'T' }}</td>
+                                    <td>{{ $result->distance }} M</td>
+                                    <td>{{ $result->workout_date }}</td>
+                                    <td>{{ $result->comments }}</td>
+                                </tr>
+                            @empty
+                            @endforelse
                             </tbody>
                         </table>
                     </div>
